@@ -22,15 +22,20 @@ template <typename T>
 T add_numbers(T const& start, T const& increment, unsigned long int const& steps)
 {
     const T max = std::numeric_limits<T>::max();
+    const T min = std::numeric_limits<T>::min();
     T result = start;
 
     for (unsigned long int i = 0; i < steps; ++i)
     {
         // Check to see if the current result will exceede the max limit if incremented again.
         // If it does, then an exception is throw to indicate overflow and exit of the function
-        if (result > max - increment)
+        if (increment >= 0 && result > max - increment)
         {
             throw std::overflow_error("Numeric overflow has occured!");
+        }
+        else if (increment < 0 && result < min - increment)
+        {
+            throw std::underflow_error("Numeric underflow has occured!");
         }
 
         result += increment;
@@ -52,14 +57,18 @@ template <typename T>
 T subtract_numbers(T const& start, T const& decrement, unsigned long int const& steps)
 {
     T max = std::numeric_limits<T>::max();
+    T min = std::numeric_limits<T>::min();
     T result = start;
 
     for (unsigned long int i = 0; i < steps; ++i)
     {
         // Check to see if the current result will exceede the min limit if decremented again.
         // If it does, then an exception is throw to indicate underflow and exit of the function
-        //if (result < min + decrement)
-        if(max / decrement < steps)
+        if (decrement < 0 && result > max + decrement)
+        {
+            throw std::overflow_error("Numeric overflow has occured!");
+        }
+        else if (decrement >= 0 && result < min + decrement)
         {
             throw std::underflow_error("Numeric underflow has occured!");
         }
@@ -120,6 +129,14 @@ void test_overflow()
     {
         std::cout << ex.what(); // Display the exception message to the user
     }
+    catch (const std::underflow_error& ex) // Catch the thrown exeption if an underflow occurs
+    {
+        std::cout << ex.what(); // Display the exception message to the user
+    }
+    catch (const std::exception& ex)
+    {
+        std::cout << "Something else happened" << ex.what();
+    }
 
     std::cout << std::endl << std::endl;
 }
@@ -166,9 +183,17 @@ void test_underflow()
         result = subtract_numbers<T>(start, decrement, steps + 1); // Attempt to subtract the numbers
         std::cout << +result; // Display the result of the subtraction
     }
+    catch (const std::overflow_error& ex) // Catch the thrown exeption if an overflow occurs
+    {
+        std::cout << ex.what(); // Display the exception message to the user
+    }
     catch (const std::underflow_error& ex) // Catch the thrown exeption if an underflow occurs
     {
         std::cout << ex.what(); // Display the exception message to the user
+    }
+    catch (const std::exception& ex)
+    {
+        std::cout << "Something else happened" << ex.what();
     }
 
     std::cout << std::endl << std::endl;
