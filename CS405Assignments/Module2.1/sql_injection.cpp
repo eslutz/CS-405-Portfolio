@@ -1,9 +1,14 @@
-// SQLInjection.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// sql_injection.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+// Eric Slutz
+// SNHU - CS405 Secure Coding
+// Module 2 Assignment 1
 //
 
 #include <algorithm>
 #include <iostream>
 #include <locale>
+#include <regex>
 #include <tuple>
 #include <vector>
 
@@ -76,11 +81,27 @@ bool initialize_database(sqlite3* db)
 bool run_query(sqlite3* db, const std::string& sql, std::vector< user_record >& records)
 {
   // TODO: Fix this method to fail and display an error if there is a suspected SQL Injection
-  //  NOTE: You cannot just flag 1=1 as an error, since 2=2 will work just as well. You need
-  //  something more generic
+  // NOTE: You cannot just flag 1=1 as an error, since 2=2 will work just as well. You need
+  // something more generic
 
   // clear any prior results
   records.clear();
+
+  // Create local copy of sql query so it can be modified
+  // Transform to statement to lowercase for regex comparison
+  std::string localCopy(sql);
+  std::transform(localCopy.begin(), localCopy.end(), localCopy.begin(), ::tolower);
+
+  // regex pattern checking for an "OR value=value;” SQL injection attack
+  std::regex pattern("or\\s([0-9]+)=\\1|(['\"][\\w]+['\"]+)=\\2");
+  std::smatch match;
+
+  // Check if the sql query argument matches the regex pattern for a specific type of sql injection
+  // Display warning, return false, and exit the method if match found
+  if (std::regex_search(localCopy, match, pattern) && match.size() > 1) {
+      std::cout << "SQL Injection Attack Suspected" << std::endl;
+      return false;
+  }
 
   char* error_message;
   if(sqlite3_exec(db, sql.c_str(), callback, &records, &error_message) != SQLITE_OK)
@@ -117,7 +138,7 @@ bool run_query_injection(sqlite3* db, const std::string& sql, std::vector< user_
       injectedSQL.append(" or 'hi'='hi';");
       break;
     case 3:
-      injectedSQL.append(" or 'hack'='hack';");
+      injectedSQL.append(" or 'hacK'='hack';");
       break;
     case 0:
     default:
