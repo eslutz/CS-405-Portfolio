@@ -7,6 +7,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Module1", "Module1\Module1.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Module2.1", "Module2.1\Module2.1.vcxproj", "{96642409-EA50-4EFE-AF47-D4119FC1C14F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{C5395DA4-23F1-45B0-B15C-72E0C5AA253C}"
+	ProjectSection(SolutionItems) = preProject
+		..\docs\Module 1 Assignment Guidelines & Rubric.pdf = ..\docs\Module 1 Assignment Guidelines & Rubric.pdf
+		..\docs\Module 2 Assignment 1 Guidelines & Rubric.pdf = ..\docs\Module 2 Assignment 1 Guidelines & Rubric.pdf
+		..\docs\Module 2 Assignment 2 Guidelines & Rubric.pdf = ..\docs\Module 2 Assignment 2 Guidelines & Rubric.pdf
+		..\docs\README.md = ..\docs\README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM64 = Debug|ARM64
