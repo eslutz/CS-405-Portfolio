@@ -15,12 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="PythonWithExploit.py" />
-    <None Include="PythonWithoutExploit.py" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="buffer_overflow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PythonWithExploit.py">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="PythonWithoutExploit.py">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
