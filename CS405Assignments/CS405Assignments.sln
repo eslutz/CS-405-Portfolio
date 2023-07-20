@@ -9,10 +9,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Module2.1", "Module2.1\Modu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{C5395DA4-23F1-45B0-B15C-72E0C5AA253C}"
 	ProjectSection(SolutionItems) = preProject
-		..\docs\Module 1 Assignment Guidelines & Rubric.pdf = ..\docs\Module 1 Assignment Guidelines & Rubric.pdf
-		..\docs\Module 2 Assignment 1 Guidelines & Rubric.pdf = ..\docs\Module 2 Assignment 1 Guidelines & Rubric.pdf
-		..\docs\Module 2 Assignment 2 Guidelines & Rubric.pdf = ..\docs\Module 2 Assignment 2 Guidelines & Rubric.pdf
+		..\docs\Module 1 Assignment Guidelines and Rubric.pdf = ..\docs\Module 1 Assignment Guidelines and Rubric.pdf
+		..\docs\Module 1 Assignment.pdf = ..\docs\Module 1 Assignment.pdf
+		..\docs\Module 2 Assignment 1 Guidelines and Rubric.pdf = ..\docs\Module 2 Assignment 1 Guidelines and Rubric.pdf
+		..\docs\Module 2 Assignment 1.pdf = ..\docs\Module 2 Assignment 1.pdf
+		..\docs\Module 2 Assignment 2 Guidelines and Rubric.pdf = ..\docs\Module 2 Assignment 2 Guidelines and Rubric.pdf
+		..\docs\Module 2 Assignment 2.pdf = ..\docs\Module 2 Assignment 2.pdf
 		..\docs\Module 4 Assignment Guidelines and Rubric.pdf = ..\docs\Module 4 Assignment Guidelines and Rubric.pdf
+		..\docs\Module 4 Assignment.pdf = ..\docs\Module 4 Assignment.pdf
 		..\docs\README.md = ..\docs\README.md
 	EndProjectSection
 EndProject
