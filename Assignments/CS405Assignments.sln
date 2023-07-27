@@ -17,6 +17,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{C5395DA4-2
 		..\docs\Module 2 Assignment 2.pdf = ..\docs\Module 2 Assignment 2.pdf
 		..\docs\Module 4 Assignment Guidelines and Rubric.pdf = ..\docs\Module 4 Assignment Guidelines and Rubric.pdf
 		..\docs\Module 4 Assignment.pdf = ..\docs\Module 4 Assignment.pdf
+		..\docs\Module 5 Assignment 1 Guidelines and Rubric.pdf = ..\docs\Module 5 Assignment 1 Guidelines and Rubric.pdf
+		..\docs\Module 5 Assignment 1.pdf = ..\docs\Module 5 Assignment 1.pdf
+		..\docs\Module 5 Assignment 2 Guidelines and Rubric.pdf = ..\docs\Module 5 Assignment 2 Guidelines and Rubric.pdf
+		..\docs\Module 5 Assignment 2.pdf = ..\docs\Module 5 Assignment 2.pdf
+		..\docs\Module 5 Assignment 3 Guidelines and Rubric.pdf = ..\docs\Module 5 Assignment 3 Guidelines and Rubric.pdf
+		..\docs\Module 5 Assignment 3.pdf = ..\docs\Module 5 Assignment 3.pdf
 		..\docs\README.md = ..\docs\README.md
 	EndProjectSection
 EndProject
@@ -25,6 +31,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Module4", "Module4\Module4.vcxproj", "{FE3BD5FD-B2CA-4184-9C3E-6F9AE70C9242}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Module5.2", "Module5.2\Module5.2.vcxproj", "{D3324862-8448-4CEB-AD5C-E89FA31284DE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Module5.3", "Module5.3\Module5.3.vcxproj", "{A62C2C20-C219-4CB8-B945-1BE097D876C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,6 +104,18 @@ Global
 		{D3324862-8448-4CEB-AD5C-E89FA31284DE}.Release|x64.Build.0 = Release|x64
 		{D3324862-8448-4CEB-AD5C-E89FA31284DE}.Release|x86.ActiveCfg = Release|Win32
 		{D3324862-8448-4CEB-AD5C-E89FA31284DE}.Release|x86.Build.0 = Release|Win32
+		{A62C2C20-C219-4CB8-B945-1BE097D876C9}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{A62C2C20-C219-4CB8-B945-1BE097D876C9}.Debug|ARM64.Build.0 = Debug|ARM64
+		{A62C2C20-C219-4CB8-B945-1BE097D876C9}.Debug|x64.ActiveCfg = Debug|x64
+		{A62C2C20-C219-4CB8-B945-1BE097D876C9}.Debug|x64.Build.0 = Debug|x64
+		{A62C2C20-C219-4CB8-B945-1BE097D876C9}.Debug|x86.ActiveCfg = Debug|Win32
+		{A62C2C20-C219-4CB8-B945-1BE097D876C9}.Debug|x86.Build.0 = Debug|Win32
+		{A62C2C20-C219-4CB8-B945-1BE097D876C9}.Release|ARM64.ActiveCfg = Release|ARM64
+		{A62C2C20-C219-4CB8-B945-1BE097D876C9}.Release|ARM64.Build.0 = Release|ARM64
+		{A62C2C20-C219-4CB8-B945-1BE097D876C9}.Release|x64.ActiveCfg = Release|x64
+		{A62C2C20-C219-4CB8-B945-1BE097D876C9}.Release|x64.Build.0 = Release|x64
+		{A62C2C20-C219-4CB8-B945-1BE097D876C9}.Release|x86.ActiveCfg = Release|Win32
+		{A62C2C20-C219-4CB8-B945-1BE097D876C9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
