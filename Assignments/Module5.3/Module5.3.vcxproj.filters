@@ -13,24 +13,26 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Data Files">
-      <UniqueIdentifier>{75daa38d-d2e4-4f4d-8f7f-18d2683534d4}</UniqueIdentifier>
+    <Filter Include="Static Analysis Results">
+      <UniqueIdentifier>{55b0585a-c3f3-446f-8e17-770184affb35}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="encryption.cpp">
+    <ClCompile Include="questionable_code.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="inputdatafile.txt">
-      <Filter>Data Files</Filter>
-    </Text>
-    <Text Include="decrytpteddatafile.txt">
-      <Filter>Data Files</Filter>
-    </Text>
-    <Text Include="encrypteddatafile.txt">
-      <Filter>Data Files</Filter>
-    </Text>
+    <Xml Include="questionable_code_ccpcheck_results.xml">
+      <Filter>Static Analysis Results</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="questionable_code_visual_studio_results.png">
+      <Filter>Static Analysis Results</Filter>
+    </Image>
+    <Image Include="questionable_code_cppcheck_results.png">
+      <Filter>Static Analysis Results</Filter>
+    </Image>
   </ItemGroup>
 </Project>
