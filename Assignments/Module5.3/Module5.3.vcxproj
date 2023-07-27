@@ -29,8 +29,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d3324862-8448-4ceb-ad5c-e89fa31284de}</ProjectGuid>
-    <RootNamespace>Module52</RootNamespace>
+    <ProjectGuid>{a62c2c20-c219-4cb8-b945-1be097d876c9}</ProjectGuid>
+    <RootNamespace>Module53</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -182,12 +182,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="encryption.cpp" />
+    <ClCompile Include="questionable_code.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="decrytpteddatafile.txt" />
-    <Text Include="encrypteddatafile.txt" />
-    <Text Include="inputdatafile.txt" />
+    <Xml Include="questionable_code_ccpcheck_results.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="questionable_code_cppcheck_results.png" />
+    <Image Include="questionable_code_visual_studio_results.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
