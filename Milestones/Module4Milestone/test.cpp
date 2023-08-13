@@ -162,7 +162,7 @@ TEST_P(ParameterizedCollectionTest, MaxSizeGreaterThanSize)
     ASSERT_GT(collection->max_size(), collection->size());
 }
 
-// TODO: Create a test to verify that capacity is greater than or equal to size for 0, 1, 5, 10 entries
+// Test to verify that capacity is greater than or equal to size for 0, 1, 5, 10 entries
 TEST_P(ParameterizedCollectionTest,CapacityGreaterThanOrEqualToSize)
 {
     // Test that collection is empty.
@@ -327,6 +327,7 @@ TEST_F(CollectionTest, ReserveIncreaseCollectionCapacity)
     // Test that capacity is greater than size.
     ASSERT_GT(collection->capacity(), collection->size());
 }
+
 // Test to verify the std::out_of_range exception is thrown when calling at() with an index out of bounds
 // NOTE: This is a negative test
 TEST_F(CollectionTest, OutOfRangeExceptionThrown)
